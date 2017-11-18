@@ -48,8 +48,8 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     External (_SB_.IFFS.FFSS, UnknownObj)    // (from opcode)
     External (_SB_.PCCD, UnknownObj)    // (from opcode)
     External (_SB_.PCCD.PENB, IntObj)    // (from opcode)
-    External (_SB_.PCI0.B0D3.ABAR, FieldUnitObj)    // (from opcode)
-    External (_SB_.PCI0.B0D3.BARA, IntObj)    // (from opcode)
+    External (_SB_.PCI0.HDAU.ABAR, FieldUnitObj)    // (from opcode)
+    External (_SB_.PCI0.HDAU.BARA, IntObj)    // (from opcode)
     External (_SB_.PCI0.EPON, MethodObj)    // 0 Arguments (from opcode)
     External (_SB_.PCI0.GFX0.DD02._BCM, MethodObj)    // Imported: 1 Arguments
     External (_SB_.PCI0.IGPU.ADVD, IntObj)    // (from opcode)
@@ -2485,14 +2485,31 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
             Scope (\_SB.PCI0)
             {
-                Device (B0D3)
+                Device (HDAU)
                 {
                     Name (_ADR, 0x00030000)  // _ADR: Address
+                    Method (_DSM, 4, NotSerialized)
+                    {
+                        If (LEqual (Arg2, Zero)) { Return (Buffer() { 0x03 } ) }
+                        Return (Package()
+                        {
+                            "layout-id", Buffer() { 3, 0x00, 0x00, 0x00 },
+                            "hda-gfx", Buffer() { "onboard-1" },
+                        })
+                    }
                 }
 
                 Device (IGPU)
                 {
                     Name (_ADR, 0x00020000)  // _ADR: Address
+                    Method (_DSM, 4, NotSerialized)
+                    {
+                        If (LEqual (Arg2, Zero)) { Return (Buffer() { 0x03 } ) }
+                        Return (Package()
+                        {
+                            "hda-gfx", Buffer() { "onboard-1" },
+                        })
+                    }
                 }
 
                 Device (B0D4)
@@ -11043,9 +11060,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             }
         }
 
-        If (LAnd (LNotEqual (And (\_SB.PCI0.B0D3.ABAR, 0xFFFFC004), 0xFFFFC004), LNotEqual (And (\_SB.PCI0.B0D3.ABAR, 0xFFFFC000), Zero)))
+        If (LAnd (LNotEqual (And (\_SB.PCI0.HDAU.ABAR, 0xFFFFC004), 0xFFFFC004), LNotEqual (And (\_SB.PCI0.HDAU.ABAR, 0xFFFFC000), Zero)))
         {
-            Store (\_SB.PCI0.B0D3.ABAR, \_SB.PCI0.B0D3.BARA)
+            Store (\_SB.PCI0.HDAU.ABAR, \_SB.PCI0.HDAU.BARA)
         }
 
         If (And (ICNF, 0x10))
