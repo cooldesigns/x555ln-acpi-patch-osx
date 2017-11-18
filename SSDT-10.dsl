@@ -190,6 +190,7 @@ DefinitionBlock ("", "SSDT", 2, "SgRef", "SgPch", 0x00001000)
         Method (_INI, 0, NotSerialized)  // _INI: Initialize
         {
             Store (Zero, \_SB.PCI0.RP05.PEGP._ADR)
+            
         }
 
         Method (SGON, 0, Serialized)
@@ -227,12 +228,13 @@ DefinitionBlock ("", "SSDT", 2, "SgRef", "SgPch", 0x00001000)
         }
 
         Method (SGOF, 0, Serialized)
-        {
-            If (LEqual (CCHK (Zero), Zero))
+        {   
+            
+          If (LEqual (CCHK (Zero), Zero))
             {
                 Return (Zero)
             }
-
+            
             \_SB.PCI0.LPCB.EC0.WRAM (0x0520, 0x95)
             \_SB.PCI0.LPCB.EC0.WRAM (0x03A4, Zero)
             \_SB.PCI0.LPCB.EC0.WRAM (0x03A5, Zero)

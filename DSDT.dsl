@@ -15064,7 +15064,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 If (LEqual (Arg0, 0x03))
                 {
                     Store (Arg1, ECFL)
-                }
+                }                
             }
 
             Method (RDBA, 0, Serialized)
