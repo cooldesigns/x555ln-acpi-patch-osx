@@ -34,7 +34,7 @@ DefinitionBlock ("", "SSDT", 2, "SaSsdt", "SaSsdt ", 0x00003000)
     External (_SB_.OCAD, FieldUnitObj)    // (from opcode)
     External (_SB_.PCI0, DeviceObj)    // (from opcode)
     External (_SB_.PCI0.HDAU, DeviceObj)    // (from opcode)
-    External (_SB_.PCI0.GFX0.DD02._BCM, MethodObj)    // Imported: 1 Arguments
+    External (_SB_.PCI0.IGPU.DD02._BCM, MethodObj)    // Imported: 1 Arguments
     External (_SB_.PCI0.IGPU, DeviceObj)    // (from opcode)
     External (_SB_.PCI0.IGPU.SNXD, MethodObj)    // 1 Arguments
     External (_SB_.PCI0.LPCB.EC0_.PWAC, BuffObj)    // (from opcode)

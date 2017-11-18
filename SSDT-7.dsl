@@ -38,7 +38,7 @@ DefinitionBlock ("", "SSDT", 2, "CppcTa", "CppcTabl", 0x00001000)
     External (_PR_.CPU5, ProcessorObj)    // (from opcode)
     External (_PR_.CPU6, ProcessorObj)    // (from opcode)
     External (_PR_.CPU7, ProcessorObj)    // (from opcode)
-    External (_SB_.PCI0.GFX0.DD02._BCM, MethodObj)    // Imported: 1 Arguments
+    External (_SB_.PCI0.IGPU.DD02._BCM, MethodObj)    // Imported: 1 Arguments
     External (_SB_.PCI0.LPCB.H_EC.ECMD, MethodObj)    // Imported: 1 Arguments
     External (_SB_.PCI0.LPCB.H_EC.ECRD, MethodObj)    // Imported: 1 Arguments
     External (_SB_.PCI0.LPCB.H_EC.ECWT, MethodObj)    // Imported: 2 Arguments

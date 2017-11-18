@@ -30,7 +30,7 @@ DefinitionBlock ("", "SSDT", 2, "PmRef", "Cpu0Ist", 0x00003000)
     External (_PR_.CFGD, FieldUnitObj)    // (from opcode)
     External (_PR_.CPPC, FieldUnitObj)    // (from opcode)
     External (_PR_.CPU0, ProcessorObj)    // (from opcode)
-    External (_SB_.PCI0.GFX0.DD02._BCM, MethodObj)    // Imported: 1 Arguments
+    External (_SB_.PCI0.IGPU.DD02._BCM, MethodObj)    // Imported: 1 Arguments
     External (_SB_.PCI0.LPCB.H_EC.ECMD, MethodObj)    // Imported: 1 Arguments
     External (_SB_.PCI0.LPCB.H_EC.ECRD, MethodObj)    // Imported: 1 Arguments
     External (_SB_.PCI0.LPCB.H_EC.ECWT, MethodObj)    // Imported: 2 Arguments

@@ -70,7 +70,7 @@ DefinitionBlock ("", "SSDT", 2, "DptfTa", "DptfTabl", 0x00001000)
     External (_SB_.PCCD.PENB, IntObj)    // (from opcode)
     External (_SB_.PCI0, DeviceObj)    // (from opcode)
     External (_SB_.PCI0.B0D4, DeviceObj)    // (from opcode)
-    External (_SB_.PCI0.GFX0.DD02._BCM, MethodObj)    // Imported: 1 Arguments
+    External (_SB_.PCI0.IGPU.DD02._BCM, MethodObj)    // Imported: 1 Arguments
     External (_SB_.PCI0.IGPU.LCDD._BCL, MethodObj)    // 0 Arguments (from opcode)
     External (_SB_.PCI0.IGPU.LCDD._BCM, MethodObj)    // 1 Arguments (from opcode)
     External (_SB_.PCI0.IGPU.LCDD._BQC, MethodObj)    // 0 Arguments (from opcode)

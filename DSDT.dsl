@@ -51,7 +51,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     External (_SB_.PCI0.HDAU.ABAR, FieldUnitObj)    // (from opcode)
     External (_SB_.PCI0.HDAU.BARA, IntObj)    // (from opcode)
     External (_SB_.PCI0.EPON, MethodObj)    // 0 Arguments (from opcode)
-    External (_SB_.PCI0.GFX0.DD02._BCM, MethodObj)    // Imported: 1 Arguments
+    External (_SB_.PCI0.IGPU.DD02._BCM, MethodObj)    // Imported: 1 Arguments
     External (_SB_.PCI0.IGPU.ADVD, IntObj)    // (from opcode)
     External (_SB_.PCI0.IGPU.AINT, MethodObj)    // 2 Arguments (from opcode)
     External (_SB_.PCI0.IGPU.CBLV, FieldUnitObj)    // (from opcode)

@@ -31,7 +31,7 @@ DefinitionBlock ("", "SSDT", 1, "APPLE ", "CpuPm", 0x00021500)
     External (_PR_.CPU1, DeviceObj)    // (from opcode)
     External (_PR_.CPU2, DeviceObj)    // (from opcode)
     External (_PR_.CPU3, DeviceObj)    // (from opcode)
-    External (_SB_.PCI0.GFX0.DD02._BCM, MethodObj)    // Imported: 1 Arguments
+    External (_SB_.PCI0.IGPU.DD02._BCM, MethodObj)    // Imported: 1 Arguments
     External (_SB_.PCI0.LPCB.H_EC.ECMD, MethodObj)    // Imported: 1 Arguments
     External (_SB_.PCI0.LPCB.H_EC.ECRD, MethodObj)    // Imported: 1 Arguments
     External (_SB_.PCI0.LPCB.H_EC.ECWT, MethodObj)    // Imported: 2 Arguments

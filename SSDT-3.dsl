@@ -45,7 +45,7 @@ DefinitionBlock ("", "SSDT", 2, "Ther_R", "Ther_Rvp", 0x00001000)
     External (_PR_.DTSE, FieldUnitObj)    // (from opcode)
     External (_PR_.PDTS, FieldUnitObj)    // (from opcode)
     External (_PR_.PKGA, FieldUnitObj)    // (from opcode)
-    External (_SB_.PCI0.GFX0.DD02._BCM, MethodObj)    // Imported: 1 Arguments
+    External (_SB_.PCI0.IGPU.DD02._BCM, MethodObj)    // Imported: 1 Arguments
     External (_SB_.PCI0.LPCB.H_EC.ECMD, MethodObj)    // Imported: 1 Arguments
     External (_SB_.PCI0.LPCB.H_EC.ECRD, MethodObj)    // Imported: 1 Arguments
     External (_SB_.PCI0.LPCB.H_EC.ECWT, MethodObj)    // Imported: 2 Arguments
